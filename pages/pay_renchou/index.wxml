@@ -1,0 +1,64 @@
+<view class="pay_rest_main">
+  <view class="pay_rest_details">
+    <view class="pay_rest_details_title">订单详情</view>
+    <view class="pay_rest_details_username_wrap">
+      <view class="pay_rest_details_username">订单类别：</view>
+      <view class="pay_rest_details_username_name">认筹金</view>  
+    </view>
+    <view class="pay_rest_details_username_wrap">
+      <view class="pay_rest_details_username">付款人：</view>
+      <view class="pay_rest_details_username_name">{{name}}</view>  
+    </view>
+    <view class="pay_rest_details_username_wrap">
+      <view class="pay_rest_details_username">手机号码：</view>
+      <view class="pay_rest_details_u  sername_name">{{phone}}</view>  
+    </view>
+    <view class="pay_rest_details_username_wrap">
+      <view class="pay_rest_details_username">车位名称：</view>
+      <view class="pay_rest_details_username_name">{{parkName}}车位</view>  
+    </view>
+  </view>
+
+  <view class="pay_rest_know">
+    <view class="pay_rest_know_title">缴纳须知</view>
+
+    <view class="pay_rest_know_item">
+      1. 缴纳的认筹金将作为摇号的保证金。
+    </view>
+    <view class="pay_rest_know_item">
+      2. 车位购买顺序通过摇号数字进行排序，数字越小购买顺序越靠前。
+    </view>
+    <view class="pay_rest_know_item">
+      3. 摇号存在未摇到号的情况，如未摇到号则认筹金将返回业主账户。
+    </view>
+  </view>
+</view>
+
+<view class="pay_rest_item">
+  <checkbox-group bindchange="checkboxChange">
+    <checkbox value=""color="#0089ff">
+      
+    </checkbox>
+    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已阅读并同意</text>
+    <text style="color:#0089ff" space="false" decode="false">《朋贝科技认筹金付款协议》</text>
+    <text space="false" decode="false">协议条款</text>
+        
+  </checkbox-group>
+    
+</view>
+  
+
+<view class="pay_rest_button_wrap">
+  <view class="pay_rest_button_money">
+    <view class="pay_rest_button_money_title">
+      合计：
+    </view>
+    <view class="pay_rest_button_money_msg">
+      ￥{{money*0.05}}
+    </view>
+  </view>
+  <view bindtap="pay" class="pay_rest_button_button">
+    付款
+  </view>
+        
+</view>

@@ -1,0 +1,79 @@
+<view class="park_pick_main">
+  <view class="park_pick_tab">
+    <scroll-view class="" scroll-x="true">
+      <view class="park_pick_tab_item" bindtap="parkClick" style="{{item.id==currentParkId?'background-color:#0089ff;color:#fff':''}}" wx:for="{{partitionList}}" wx:key="id" data-currentid="{{item.id}}" data-currentname="{{item.name}}">
+        {{item.name}}
+      </view>  
+    </scroll-view>
+  </view>
+
+  <view class="park_pick_uncheck">
+    <checkbox-group bindchange="checkboxChange">
+      <label for="">
+        <checkbox checked="{{onlySeeUncheck}}" color="var(--themeColor)">
+          只看未选
+        </checkbox>
+      </label>  
+    </checkbox-group>
+  </view>
+
+  <view class="park_pick_show">
+    <scroll-view scroll-y="true">
+      <block wx:if="{{onlySeeUncheck==false}}">
+        <view class="park_pick_show_item" 
+        wx:for="{{currentParkList}}" 
+        wx:key="id"
+        bindtap="itemClick"
+        data-code="{{item.code}}"
+        data-itemid="{{item.id}}"
+        style="{{item.code==chooseCode?'background-color:#ff1a1a':(item.state==0?'background-color:#fff':(item.state==1?'background-color:rgb(255,213,79)':'background-color:var(--themeColor)'))}}">
+          {{item.code}}
+        </view>  
+      </block>
+      <block wx:else>
+        <view class="park_pick_show_item" 
+        wx:for="{{currentParkList}}"
+        wx:if="{{item.state==0}}" 
+        wx:key="id"
+        bindtap="itemClick"
+        data-code="{{item.code}}"
+        data-itemid="{{item.id}}"
+        style="{{item.code==chooseCode?'background-color:#ff1a1a':'background-color:#fff'}}">
+          {{item.code}}
+        </view>
+      </block>        
+    </scroll-view>
+      
+  </view>
+
+  <view class="park_pick_notice">
+    <text class="white"></text>
+    <text>可选</text>
+    <text class="yellow"></text>
+    <text>预定</text>
+    <text class="blue"></text>
+    <text>已选</text>
+  </view>  
+
+
+</view>
+
+<!-- <view class="pay_rest_button_wrap">
+  <view class="pay_rest_button_money">
+    <view class="pay_rest_button_money_title">
+      合计：
+    </view>
+    <view class="pay_rest_button_money_msg">
+      ￥{{money}}
+    </view>
+  </view>
+  <view bindtap="pay" class="pay_rest_button_button">
+    付款
+  </view>
+        
+</view> -->
+
+<view class="park_pick_button" bindtap="pay">
+  缴 纳 定 金
+</view>
+  

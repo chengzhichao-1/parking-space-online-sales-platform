@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Select":"../../components/Select/Select"
+  },
+  "navigationBarTitleText":"开盘"
+}

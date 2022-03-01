@@ -1,0 +1,41 @@
+<view class="user_card_delete_main" style="{{name=='建设银行'?'background-color:rgb(26,102,162)':'background-color:rgb(198,80,86)'}}">
+  <view class="user_card_delete_image">
+    <image src="{{name=='建设银行'?'../../icons/user_card_jianshe_active.png':'../../icons/user_card_gongshang_active.png'}}" mode="widthFix"/>
+  </view>
+  <view class="user_card_delete_font1">
+    {{name}}储蓄卡
+  </view>
+  <view class="user_card_delete_font2">
+    **** **** **** {{code}}
+  </view>
+  
+  <view class="user_card_delete_content">
+    <view class="user_card_delete_content_title">
+      支付限额
+    </view>
+    <view class="user_card_delete_content_text1">
+      <view class="left">
+        单笔限额
+      </view>
+      <view class="right">
+        ￥30000
+      </view>
+    </view>
+
+    <view class="user_card_delete_content_text2">
+      <view class="left">
+        每日限额
+      </view>
+      <view class="right">
+        ￥50000
+      </view>
+    </view>
+  </view>
+
+  <view bindtap="cardDelete" class="user_card_delete_btn">
+    解除绑定
+  </view>
+    
+    
+</view>
+  

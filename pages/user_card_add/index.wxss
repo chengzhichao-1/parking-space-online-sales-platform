@@ -1,0 +1,84 @@
+.user_card_add_main {
+  padding: 0 60rpx;
+}
+.user_card_add_main .user_card_add_font1 {
+  margin-top: 120rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.user_card_add_main .user_card_add_font2 {
+  text-align: center;
+  margin-top: 40rpx;
+  font-size: 32rpx;
+}
+.user_card_add_main .user_card_add_form {
+  margin-top: 50rpx;
+}
+.user_card_add_main .user_card_add_form .user_card_add_item {
+  height: 110rpx;
+  line-height: 110rpx;
+  display: flex;
+  font-size: 32rpx;
+  border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee;
+}
+.user_card_add_main .user_card_add_form .user_card_add_item .user_card_add_item_left {
+  flex: 1;
+  font-weight: 450;
+}
+.user_card_add_main .user_card_add_form .user_card_add_item .user_card_add_item_right {
+  flex: 4;
+  color: #333;
+  margin-right: 20rpx;
+}
+.user_card_add_main .user_card_add_form .user_card_add_item .user_card_add_item_right input {
+  margin-top: 34rpx;
+}
+.user_card_add_main .user_card_add_form .user_card_add_item .user_card_add_item_right .select {
+  text-align: left;
+}
+.user_card_add_main .user_card_add_form .user_card_add_item .user_card_add_item_right .image1 {
+  float: right;
+  width: 40rpx;
+  margin-top: 36rpx;
+}
+.user_card_add_main .user_card_add_form .user_card_add_item .user_card_add_item_right .image2 {
+  float: right;
+  width: 40rpx;
+  margin-top: -36rpx;
+}
+.user_card_add_main .user_card_other_image {
+  margin-top: 50rpx;
+}
+.user_card_add_main .user_card_add_btn {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--themeColor);
+  width: 350rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 80rpx auto;
+  border-radius: 10rpx;
+}
+.new {
+  position: relative;
+  width: 100%;
+  padding: 20rpx 10rpx;
+  line-height: 70rpx;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+}
+.new::after {
+  position: absolute;
+  display: block;
+  right: 16rpx;
+  top: 50rpx;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid #999;
+}

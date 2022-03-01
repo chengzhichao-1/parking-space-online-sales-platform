@@ -1,0 +1,39 @@
+<view class="yaohao_search_main">
+  <view class="yaohao_search_search_wrap">
+    <view class="yaohao_search_search_title">
+      <text decode="true">——</text>
+      <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;摇号结果查询&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <text decode="true">——</text>
+    </view>
+
+    <view class="yaohao_search_search_info">
+      <view class="yaohao_search_search_info_threeInp">
+        <input type="text" placeholder="楼盘名称"/>
+
+        <input type="text" placeholder="摇号编号"/>
+
+        <input type="text" placeholder="手机号码"/>
+      </view>
+      
+      <view class="yaohao_search_search_info_btn">
+        立即查询
+      </view>
+       
+      <view class="yaohao_search_search_info_item">
+        <view>
+          已有<text>8698</text>位用户使用该功能查询摇号结果
+        </view>
+        <view>
+          声明：最终结果以“国立公证处”公示为准
+        </view>
+            
+      </view>
+        
+    </view>
+      
+  
+  </view>
+
+    
+</view>
+  

@@ -1,0 +1,108 @@
+<view class="pay_rest_main">
+  <view class="pay_rest_details">
+    <view class="pay_rest_details_title">订单详情</view>
+    <view class="pay_rest_details_username_wrap">
+      <view class="pay_rest_details_username">订单类别：</view>
+      <view class="pay_rest_details_username_name">尾款</view>  
+    </view>
+    <view class="pay_rest_details_username_wrap">
+      <view class="pay_rest_details_username">付款人：</view>
+      <view class="pay_rest_details_username_name">张三</view>  
+    </view>
+    <view class="pay_rest_details_username_wrap">
+      <view class="pay_rest_details_username">手机号码：</view>
+      <view class="pay_rest_details_u  sername_name">18157732377</view>  
+    </view>
+    <view class="pay_rest_details_username_wrap">
+      <view class="pay_rest_details_username">车位名称：</view>
+      <view class="pay_rest_details_username_name">{{partitionName}}</view>  
+    </view>
+    <view class="pay_rest_details_username_wrap">
+      <view class="pay_rest_details_username">车位编号：</view>
+      <view class="pay_rest_details_username_name">{{code}}车位</view>  
+    </view>
+  </view>
+
+  <view class="pay_rest_know">
+    <view class="pay_rest_know_title">支付须知</view>
+
+    <view class="pay_rest_know_item">
+      1. 尾款支付方式为线上支付方式，一经支付，如需退款只能通过人工客户办理或线下办理。
+    </view>
+    <view class="pay_rest_know_item">
+      2. 尾款支付后，电子订单会在二至五个工作日内发送至业主的账户中。
+    </view>
+    <view class="pay_rest_know_item">
+      3. 发票将会通过有邮寄的方式寄送给业主。
+    </view>
+  </view>
+    
+  <view class="pay_rest_way">
+    <view class="pay_rest_way_title">支付方式</view>
+    <radio-group bindchange="radioChange" class="pay_rest_way_radio">
+        <label>
+            <radio checked="{{true}}" value="1" color="#0089ff"/>
+            <view>全款</view>
+        </label>
+        <label>
+            <radio value="2" color="#0089ff"/>
+            <view>分期付款</view>
+            <view style="{{currentValue==2?'display:block':'display:none'}}"  class="themeColor">(12、24、36期的年手续费分别为3.5%、6.8%、9%)</view>              
+        </label>
+        <view class="pay_rest_way_divide" style="{{currentValue==2?'display:flex':'display:none'}}">
+          <view data-divide="1" bindtap="divideClick" class="pay_rest_way_divide_item" style="{{currentDivide==1?'border-color:#0089ff;color:#0089ff':''}}">
+            分12期(含手续费)
+            ￥{{divide12}}/期
+          </view>
+          <view data-divide="2" bindtap="divideClick" class="pay_rest_way_divide_item" style="{{currentDivide==2?'border-color:#0089ff;color:#0089ff':''}}">
+            分24期(含手续费)
+            ￥{{divide24}}/期
+          </view>
+          <view data-divide="3" bindtap="divideClick" class="pay_rest_way_divide_item" style="{{currentDivide==3?'border-color:#0089ff;color:#0089ff':''}}">
+            分36期(含手续费)
+            ￥{{divide36}}/期
+          </view>
+            
+        </view>
+          
+        <label>
+            <radio value="3" color="#0089ff"/>
+            <view>按揭付款</view>
+            <view style="{{currentValue==3?'display:block':'display:none'}}"  class="themeColor">(等额本息还款，12个月，年利率5%)</view>
+            <view style="{{currentValue==3?'display:block':'display:none'}}"  class="themeColor">每月还款:￥{{anjie}}</view>
+        </label>
+      </radio-group>
+
+  </view>
+  
+  
+    
+</view>
+<view class="pay_rest_item">
+  <checkbox-group bindchange="checkboxChange">
+    <checkbox value=""color="#0089ff">
+      
+    </checkbox>
+    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已阅读并同意</text>
+    <text style="color:#0089ff" space="false" decode="false">《朋贝科技尾款付款协议》</text>
+    <text space="false" decode="false">协议条款</text>
+        
+  </checkbox-group>
+    
+</view>
+   
+
+<view class="pay_rest_button_wrap">
+  <view class="pay_rest_button_money">
+    <view class="pay_rest_button_money_title">
+      合计：
+    </view>
+    <view class="pay_rest_button_money_msg">
+      ￥{{lastMoney}}
+    </view>
+  </view>
+  <view bindtap="pay" class="pay_rest_button_button">
+    付款
+  </view>
+        
+</view>

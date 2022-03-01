@@ -1,0 +1,79 @@
+Page{
+  background-color: #eee;
+}
+.identification_main{
+  
+  width: 100%;
+  height: 100%;
+  .identification_form{
+    margin: 40rpx auto;
+    width: 690rpx;
+    form{
+      .identification_info{
+        border-radius: 10rpx;
+        background-color: #fff;
+        .identification_name_wrap{
+          display: flex;
+          height: 90rpx;
+          line-height: 90rpx;
+          border-bottom: 4rpx solid #eee;
+          .identification_name_text{
+            padding-left: 20rpx;
+            flex: 5;
+          }
+          .identification_name_input{
+            padding-top: 30rpx;
+            flex: 14;
+          }
+        }
+        .identification_check_wrap{
+          display: flex;
+          height: 90rpx;
+          line-height: 90rpx;
+          border-bottom: 4rpx solid #eee;
+          .identification_check_text{
+            padding-left: 20rpx;
+            flex: 5;
+          }
+          .identification_check_input{
+            padding-top: 30rpx;
+            flex: 9;
+          }
+          .identification_check_countdown{
+            flex: 5;
+            color: var(--themeColor);
+            text-align: center;
+            border-left: 2rpx solid #eee;
+          }
+        }
+      }
+      .identification_item{
+        margin: 30rpx auto;
+        checkbox-group{
+          display: inline;
+        }
+        text-align: center;
+        text{
+          font-size: 24rpx;
+        }
+        .themecolor{
+          color: var(--themeColor);
+        }
+      }
+      .identification_button{
+        width: 100%;
+        height: 100rpx;
+        button{
+          width: 100%;
+          height: 100%;
+          font-weight: 400;
+          color: #fff;
+          background-color: var(--themeColor);
+          font-size: 36rpx;
+          line-height: 70rpx;  
+        }
+        
+      }
+    }
+  }
+}

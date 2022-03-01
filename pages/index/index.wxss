@@ -1,0 +1,197 @@
+.index_main .index_search {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.index_main .index_search .index_search_image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.index_main .index_search .index_search_city {
+  position: absolute;
+  top: 32rpx;
+  left: 32rpx;
+  color: #fff;
+  font-weight: 500;
+  font-size: 30rpx;
+}
+.index_main .index_search .index_search_park {
+  position: absolute;
+  top: 88rpx;
+  left: 32rpx;
+  background-color: #fff;
+  width: 690rpx;
+  height: 68rpx;
+  border-radius: 34rpx;
+  padding-left: 90rpx;
+  line-height: 68rpx;
+}
+.index_main .index_search .index_search_image3 {
+  position: absolute;
+  top: 100rpx;
+  left: 60rpx;
+  width: 40rpx;
+}
+.index_main .index_search .index_search_image6 {
+  position: absolute;
+  top: 100rpx;
+  left: 610rpx;
+  width: 100rpx;
+  height: 48rpx;
+}
+.index_main .index_search .index_search_image6 image {
+  width: 100%;
+  height: 100%;
+}
+.index_main .index_search .index_search_image6 text {
+  position: absolute;
+  top: 7rpx;
+  left: 26rpx;
+  color: #fff;
+  font-size: 24rpx;
+  font-weight: 200;
+}
+.index_main .index_search .index_search_swiper {
+  position: absolute;
+  top: 190rpx;
+  left: 32rpx;
+  width: 690rpx;
+  height: 270rpx;
+  border-radius: 20rpx;
+}
+.index_main .index_search .index_search_swiper swiper-item {
+  border-radius: 20rpx;
+}
+.index_main .index_search .index_search_swiper swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+.index_main .index_position {
+  display: flex;
+  padding-top: 490rpx;
+  text-align: center;
+  color: #797979;
+}
+.index_main .index_position .index_position_image {
+  height: 160rpx;
+  flex: 1;
+  margin: 0 30rpx;
+}
+.index_main .index_advantage {
+  display: flex;
+  padding-top: 30rpx;
+}
+.index_main .index_advantage .index_advantage_image {
+  margin: 0 26rpx;
+  flex: 1;
+  height: 120rpx;
+  font-size: 20rpx;
+  color: #d3d3d3;
+  text-align: center;
+}
+.index_main .index_advantage .index_advantage_image image {
+  width: 50%;
+}
+.index_main .index_hot {
+  margin: 0 32rpx;
+}
+.index_main .index_hot .index_hot_title {
+  width: 220rpx;
+}
+.index_main .index_hot .index_hot_image {
+  margin-top: 10rpx;
+  display: flex;
+}
+.index_main .index_hot .index_hot_image image {
+  flex: 1;
+}
+.index_main .index_recommend {
+  margin: 40rpx 0;
+}
+.index_main .index_recommend button {
+  width: 750rpx;
+  height: 216rpx;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.index_main .index_recommend button image {
+  width: 100%;
+}
+.index_main .index_show {
+  margin: 0 32rpx;
+}
+.index_main .index_show .index_show_title {
+  width: 220rpx;
+}
+.index_main .index_show .index_show_title_bottom {
+  height: 1rpx;
+  width: 100%;
+  border-bottom: 2rpx solid grey;
+}
+.first_tab {
+  width: 100%;
+}
+.first_tab .park_item {
+  width: 100%;
+  height: 280rpx;
+  padding: 16rpx 36rpx;
+  border-bottom: 2rpx solid grey;
+  display: flex;
+}
+.first_tab .park_item .park_img_wrap {
+  flex: 7;
+  padding-right: 30rpx;
+  margin-top: 18rpx;
+}
+.first_tab .park_item .park_img_wrap image {
+  width: 280rpx;
+  height: 200rpx;
+}
+.first_tab .park_item .park_info_wrap {
+  flex: 9;
+}
+.first_tab .park_item .park_info_wrap .park_name_star {
+  overflow: hidden;
+  height: 60rpx;
+}
+.first_tab .park_item .park_info_wrap .park_name_star .park_name {
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+.first_tab .park_item .park_info_wrap .park_name_star .park_star {
+  float: right;
+  width: 34rpx;
+  line-height: 60rpx;
+}
+.first_tab .park_item .park_info_wrap .park_name_star .park_star image {
+  width: 100%;
+}
+.first_tab .park_item .park_info_wrap .park_price {
+  font-size: 28rpx;
+  color: #dc5d34;
+  padding-bottom: 10rpx;
+}
+.first_tab .park_item .park_info_wrap .park_region {
+  font-size: 24rpx;
+  color: grey;
+  padding-bottom: 10rpx;
+}
+.first_tab .park_item .park_info_wrap .park_state {
+  font-size: 20rpx;
+  overflow: hidden;
+}
+.first_tab .park_item .park_info_wrap .park_state .park_state_text {
+  float: left;
+  margin-right: 20rpx;
+  padding: 6rpx 6rpx;
+  color: #fff;
+  background-color: var(--themeColor);
+}
+.first_tab .park_item .park_info_wrap .park_time {
+  font-size: 24rpx;
+  padding-top: 10rpx;
+}

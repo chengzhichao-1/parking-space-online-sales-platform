@@ -1,0 +1,107 @@
+<view class="yaohao_main">
+  <view class="yaohao_number_wrap">
+    <view class="yaohao_number_title">
+      当前摇号人数
+    </view>
+    <view class="yaohao_number_realPeople">
+      {{realPeople}}
+    </view>
+    <view class="yaohao_number_predict">
+      <view class="yaohao_number_predict_people">
+        <view class="yaohao_number_predict_people_msg">
+          1200
+        </view>
+        <view class="yaohao_number_predict_people_text">
+          预测人数
+        </view>
+      </view>
+      
+      <view class="yaohao_number_predict_gailv">
+        <view class="yaohao_number_predict_gailv_msg">
+          95.6%
+        </view>
+        <view class="yaohao_number_predict_gailv_text">
+          预测概率
+        </view>
+      </view>
+    </view> 
+  </view>
+
+  <view class="yaohao_order_wrap">
+    <view class="yaohao_order_title">
+      摇号详情
+    </view>
+    <view class="yaohao_order_info">
+      <view class="yaohao_order_item">
+        <view class="yaohao_order_item_left">
+          名称：
+        </view>
+        <view class="yaohao_order_item_right">
+          西苑小区车位
+        </view>
+      </view>
+      <view class="yaohao_order_item">
+        <view class="yaohao_order_item_left">
+          认筹人：
+        </view>
+        <view class="yaohao_order_item_right">
+          张三
+        </view>
+      </view>
+      <view class="yaohao_order_item">
+        <view class="yaohao_order_item_left">
+          认筹时间：
+        </view>
+        <view class="yaohao_order_item_right">
+          {{currentTime}}
+        </view>
+      </view>
+      <view class="yaohao_order_item">
+        <view class="yaohao_order_item_left">
+          手机号码：
+        </view>
+        <view class="yaohao_order_item_right">
+          18157732377
+        </view>
+      </view>
+      <view class="yaohao_order_item">
+        <view class="yaohao_order_item_left">
+          摇号编号：
+        </view>
+        <view class="yaohao_order_item_right">
+          {{timestamp}}
+        </view>
+      </view>
+    </view>
+      
+      
+  </view>
+    
+  <view class="yaohao_notice_wrap">
+    <view class="yaohao_notice_title">
+      摇号需知
+    </view>
+    <view class="yaohao_notice_item">
+      1. 摇号结束将在14个工作日后公布，可在个人中心“摇号结果查询”查询摇号最终结果。
+    </view>
+    <view class="yaohao_notice_item">
+      2. 一经摇号，将无法在线上取消摇号资格，需于线下进行人工取消。
+    </view>
+    <view class="yaohao_notice_item">
+      3. 最终结束以“国立公证处”公示为准。
+    </view>  
+  </view>
+
+  <view class="yaohao_order_item">
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox value=""color="#0089ff">
+        <text decode="{{true}}">已阅读并同意</text>
+        <text style="color:#0089ff" space="false" decode="false">《朋贝科技摇号相关协议》</text>
+        <text space="false" decode="false">协议条款</text>  
+      </checkbox>
+    </checkbox-group>
+  </view>  
+
+  <view bindtap="yaohao" class="yaohao_btn">开 始 摇 号</view>
+    
+</view>

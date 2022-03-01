@@ -1,0 +1,88 @@
+<view class="user_data_main">
+  <image class="user_data_bg" src="../../icons/index20.png" mode="widthFix"/>
+  <view class="user_data_contain">
+    <view class="user_data_contain_top">
+      <view class="user_data_contain_top_left">
+        <image src="{{userInfo.avatarUrl}}" mode="widthFix"/>
+          
+      </view>
+      <view class="user_data_contain_top_right">
+        <view class="user_data_contain_top_right_top">
+          <view class="user_data_contain_top_right_top_item">
+            <view class="top">
+              付款
+            </view>
+            <view class="bottom">
+              6
+            </view>
+          </view>
+          <view class="user_data_contain_top_right_top_item">
+            <view class="top">
+              收藏
+            </view>
+            <view class="bottom">
+              4
+            </view>
+          </view>
+          <view class="user_data_contain_top_right_top_item">
+            <view class="top">
+              优惠券
+            </view>
+            <view class="bottom">
+              3
+            </view>
+          </view>
+        </view>  
+        <view class="user_data_contain_top_right_bottom">
+          <view class="user_data_contain_top_right_bottom_item">
+            编辑资料
+          </view>
+          <view class="user_data_contain_top_right_bottom_item2">
+            <image src="../../icons/user_data6.png" mode="widthFix"/>
+          </view>
+        </view>
+      </view>  
+    </view>
+
+    <view class="user_data_contain_name">
+      {{userInfo.nickName}}
+    </view>
+
+    <view class="user_data_contain_form">
+      <view class="user_data_contain_form_item">
+        <image class="user_data_contain_form_item_image1" src="../../icons/user_data5.png" mode="widthFix"/>
+        <view class="user_data_contain_form_item_text1">账号</view>
+        <image class="user_data_contain_form_item_image2" src="../../icons/user_data7.png" mode="widthFix"/>
+        <view class="user_data_contain_form_item_text2">756708659</view>  
+      </view>
+      <view class="user_data_contain_form_item">
+        <image class="user_data_contain_form_item_image1" src="../../icons/user_data2.png" mode="widthFix"/>
+        <view class="user_data_contain_form_item_text1">电话</view>
+        <image class="user_data_contain_form_item_image2" src="../../icons/user_data7.png" mode="widthFix"/>
+        <view class="user_data_contain_form_item_text2">18157732377</view>  
+      </view>
+      <view class="user_data_contain_form_item">
+        <image class="user_data_contain_form_item_image1" src="../../icons/user_data3.png" mode="widthFix"/>
+        <view class="user_data_contain_form_item_text1">二维码名片</view>
+        <image class="user_data_contain_form_item_image2" src="../../icons/user_data7.png" mode="widthFix"/>  
+      </view>
+      <view class="user_data_contain_form_item">
+        <image class="user_data_contain_form_item_image1" src="../../icons/user_data1.png" mode="widthFix"/>
+        <view class="user_data_contain_form_item_text1">地址</view>
+        <image class="user_data_contain_form_item_image2" src="../../icons/user_data7.png" mode="widthFix"/>
+        <view class="user_data_contain_form_item_text2">浙江省杭州市拱墅区</view>  
+      </view>
+      <view class="user_data_contain_form_item">
+        <image class="user_data_contain_form_item_image1" src="../../icons/user_data4.png" mode="widthFix"/>
+        <view class="user_data_contain_form_item_text1">更多信息</view>
+        <image class="user_data_contain_form_item_image2" src="../../icons/user_data7.png" mode="widthFix"/> 
+      </view>
+        
+    </view>
+      
+      
+      
+  </view>
+    
+</view>
+  

@@ -1,0 +1,77 @@
+<view class="collect_main">
+  <!-- 收藏选择栏 -->
+  <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange"/>
+  
+  <block wx:for="{{noOpenList}}" wx:key="index" wx:if="{{tabs[0].isActive&&item.openState==false}}">
+    <view class="first_tab">
+      <navigator class="park_item"
+      url="/pages/park_details/index?park_id={{item.communityId}}"
+      >
+        <!-- 左侧 图片容器 -->
+        <view class="park_img_wrap">
+          <image mode="scaleToFill" src="{{item.coverUrl}}"></image>
+        </view>
+        <!-- 右侧 商品容器 -->
+        <view class="park_info_wrap">
+          <view class="park_name_star">
+            <view class="park_name">{{item.name}}车位</view>
+            <view catchtap="collectClick1" data-index="{{index}}" class="park_star" data-communityid="{{item.communityId}}">
+              <image src="../../icons/star-active.png" mode="widthFix"/>
+            </view>
+              
+          </view>
+            
+          <view wx:if="{{item.highestPrice==item.lowestPrice}}" class="park_price">{{item.lowestPrice}}元</view>
+          <view wx:else class="park_price">{{item.lowestPrice}}元~{{item.highestPrice}}元</view>
+          
+          <view class="park_region">{{item.place}}</view>
+          <view class="park_state"> 
+            <view class="park_state_text">{{item.openState?'已开盘':'未开盘'}}</view>
+            <view wx:if="{{!item.openState}}" class="park_state_text">{{item.recognizeState?'已开始认筹':'未开始认筹'}}</view>  
+          </view>
+          <view wx:if="{{item.openState}}" class="park_time">收盘时间：{{item.closeDate}}</view>
+          <view wx:elif="{{item.recognizeState}}" class="park_time">开盘时间：{{item.openDate}}</view>
+          <view wx:else class="park_time">认筹时间：{{item.recognizeDate}}</view>
+          
+        </view>
+      </navigator>
+    </view>  
+  </block>
+  <block wx:for="{{openList}}" wx:key="index" wx:if="{{tabs[1].isActive&&item.openState==true}}">
+    <view class="first_tab">
+      <navigator class="park_item"
+      url="/pages/park_details/index?park_id={{item.communityId}}"
+      >
+        <!-- 左侧 图片容器 -->
+        <view class="park_img_wrap">
+          <image mode="scaleToFill" src="{{item.coverUrl}}"></image>
+        </view>
+        <!-- 右侧 商品容器 -->
+        <view class="park_info_wrap">
+          <view class="park_name_star">
+            <view class="park_name">{{item.name}}车位</view>
+            <view catchtap="collectClick2" data-index="{{index}}" class="park_star" data-communityid="{{item.communityId}}">
+              <image src="../../icons/star-active.png" mode="widthFix"/>
+            </view>
+              
+          </view>
+            
+          <view wx:if="{{item.highestPrice==item.lowestPrice}}" class="park_price">{{item.lowestPrice}}元</view>
+          <view wx:else class="park_price">{{item.lowestPrice}}元~{{item.highestPrice}}元</view>
+          
+          <view class="park_region">{{item.place}}</view>
+          <view class="park_state"> 
+            <view class="park_state_text">{{item.openState?'已开盘':'未开盘'}}</view>
+            <view wx:if="{{!item.openState}}" class="park_state_text">{{item.recognizeState?'已开始认筹':'未开始认筹'}}</view>  
+          </view>
+          <view wx:if="{{item.openState}}" class="park_time">收盘时间：{{item.closeDate}}</view>
+          <view wx:elif="{{item.recognizeState}}" class="park_time">开盘时间：{{item.openDate}}</view>
+          <view wx:else class="park_time">认筹时间：{{item.recognizeDate}}</view>
+          
+        </view>
+      </navigator>
+    </view>  
+  </block>
+    
+</view>
+  

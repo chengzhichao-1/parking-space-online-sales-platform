@@ -1,0 +1,113 @@
+Page {
+  background-color: #eee;
+}
+.yaohao_main {
+  width: 100%;
+}
+.yaohao_main .yaohao_number_wrap {
+  margin: 20rpx auto;
+  background-color: #fff;
+  width: 700rpx;
+  padding: 30rpx 40rpx;
+  border-radius: 30rpx;
+}
+.yaohao_main .yaohao_number_wrap .yaohao_number_title {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.yaohao_main .yaohao_number_wrap .yaohao_number_realPeople {
+  color: var(--themeColor);
+  font-size: 54rpx;
+  margin: 15rpx 0 30rpx 0;
+}
+.yaohao_main .yaohao_number_wrap .yaohao_number_predict {
+  background-color: #c8e6ff;
+  display: flex;
+  border-radius: 50rpx 0 50rpx 0;
+}
+.yaohao_main .yaohao_number_wrap .yaohao_number_predict .yaohao_number_predict_people {
+  margin: 20rpx auto;
+  flex: 1;
+  border-right: 4rpx solid #fff;
+}
+.yaohao_main .yaohao_number_wrap .yaohao_number_predict .yaohao_number_predict_people .yaohao_number_predict_people_msg {
+  text-align: center;
+  color: var(--themeColor);
+}
+.yaohao_main .yaohao_number_wrap .yaohao_number_predict .yaohao_number_predict_people .yaohao_number_predict_people_text {
+  text-align: center;
+}
+.yaohao_main .yaohao_number_wrap .yaohao_number_predict .yaohao_number_predict_gailv {
+  margin: 30rpx auto;
+  flex: 1;
+}
+.yaohao_main .yaohao_number_wrap .yaohao_number_predict .yaohao_number_predict_gailv .yaohao_number_predict_gailv_msg {
+  text-align: center;
+  color: var(--themeColor);
+}
+.yaohao_main .yaohao_number_wrap .yaohao_number_predict .yaohao_number_predict_gailv .yaohao_number_predict_gailv_text {
+  text-align: center;
+}
+.yaohao_main .yaohao_order_wrap {
+  margin: 20rpx auto;
+  background-color: #fff;
+  width: 700rpx;
+  padding: 30rpx 40rpx;
+  border-radius: 30rpx;
+}
+.yaohao_main .yaohao_order_wrap .yaohao_order_title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+.yaohao_main .yaohao_order_wrap .yaohao_order_info .yaohao_order_item {
+  display: flex;
+  margin: 10rpx 0;
+}
+.yaohao_main .yaohao_order_wrap .yaohao_order_info .yaohao_order_item .yaohao_order_item_left {
+  flex: 19;
+  text-align: right;
+  color: #333;
+}
+.yaohao_main .yaohao_order_wrap .yaohao_order_info .yaohao_order_item .yaohao_order_item_right {
+  flex: 50;
+  font-weight: 600;
+}
+.yaohao_main .yaohao_notice_wrap {
+  margin: 20rpx auto;
+  background-color: #fff;
+  width: 700rpx;
+  padding: 30rpx 40rpx;
+  border-radius: 30rpx;
+}
+.yaohao_main .yaohao_notice_wrap .yaohao_notice_title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+.yaohao_main .yaohao_notice_wrap .yaohao_notice_item {
+  font-size: 28rpx;
+}
+.yaohao_main .yaohao_order_item {
+  margin: 20rpx auto;
+  width: 700rpx;
+}
+.yaohao_main .yaohao_order_item checkbox-group {
+  width: 100%;
+  text-align: center;
+}
+.yaohao_main .yaohao_order_item checkbox-group checkbox text {
+  font-size: 24rpx;
+}
+.yaohao_main .yaohao_btn {
+  width: 700rpx;
+  margin: 40rpx auto;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-weight: 600;
+  font-size: 36rpx;
+  text-align: center;
+  color: #fff;
+  background-color: var(--themeColor);
+  border-radius: 30rpx;
+}

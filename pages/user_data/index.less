@@ -1,0 +1,112 @@
+.user_data_main{
+  position: relative;
+  top: 0;
+  left: 0;
+  .user_data_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .user_data_contain{
+    position: absolute;
+    top: 290rpx;
+    left: 0;
+    padding: 60rpx 40rpx;
+    border-radius: 60rpx;
+    background-color: #fff;
+    width: 100%;
+    height: 400rpx;
+    .user_data_contain_top{
+      overflow: hidden;
+      .user_data_contain_top_left{
+        width: 150rpx;
+        height: 150rpx;
+        float: left;
+        image{
+          border-radius: 50%;
+        }
+      }
+      .user_data_contain_top_right{
+        width: 500rpx;
+        height: 200rpx;
+        float: right;
+        padding-left: 50rpx;
+        .user_data_contain_top_right_top{
+          display: flex;
+          text-align: center;
+          .user_data_contain_top_right_top_item{
+            flex: 1;
+            .top{
+              color: rgb(180, 180, 180);
+              font-size: 20rpx;
+            }
+            .bottom{
+              margin-top: 10rpx;
+              font-weight: 600;
+              font-size: 30rpx;
+            }
+          }
+        }
+        .user_data_contain_top_right_bottom{
+          display: flex;
+          height: 60rpx;
+          margin-top: 20rpx;
+          .user_data_contain_top_right_bottom_item{
+            flex: 5;
+            text-align: center;
+            line-height: 60rpx;
+            border-radius: 30rpx;
+            background-color: rgb(245, 245, 245);
+          }
+          .user_data_contain_top_right_bottom_item2{
+            flex: 3;
+            margin-left: 30rpx;
+            background-color: rgb(245, 245, 245);
+            border-radius: 30rpx;
+            image{
+              display: block;
+              margin: 15rpx auto;
+              width: 30rpx;
+            }
+          }
+        }
+      }
+    }
+
+    .user_data_contain_name{
+      height: 120rpx;
+      line-height: 120rpx;
+      font-size: 42rpx;
+      font-weight: 500;
+    }
+
+    .user_data_contain_form{
+      .user_data_contain_form_item{
+        height: 90rpx;
+        line-height: 90rpx;
+        .user_data_contain_form_item_image1{
+          width: 32rpx;
+          height: 32rpx;
+          float: left;
+          margin-top: 29rpx;
+          margin-right: 40rpx;
+        }
+        .user_data_contain_form_item_text1{
+          float: left;
+        }
+        .user_data_contain_form_item_image2{
+          float: right;
+          margin-left: 40rpx;
+          width: 14rpx;
+          height: 24rpx;
+          margin-top: 33rpx;
+        }
+        .user_data_contain_form_item_text2{
+          float: right;
+          color: rgb(180, 180, 180);
+        }
+      }
+    }
+  }
+}

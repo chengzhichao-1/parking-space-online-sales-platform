@@ -1,0 +1,59 @@
+Page {
+  background-color: #eee;
+}
+.user_card_main {
+  padding: 0 40rpx;
+  margin-top: 40rpx;
+}
+.user_card_main .user_card_item {
+  position: relative;
+  height: 240rpx;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+.user_card_main .user_card_item .user_card_item_icon1 {
+  position: absolute;
+  top: 32rpx;
+  left: 32rpx;
+  width: 70rpx;
+}
+.user_card_main .user_card_item .user_card_item_icon1 image {
+  border-radius: 40rpx;
+}
+.user_card_main .user_card_item .user_card_item_icon2 {
+  position: absolute;
+  top: -40rpx;
+  left: 350rpx;
+  width: 256rpx;
+}
+.user_card_main .user_card_item .user_card_item_icon2 image {
+  opacity: 0.3;
+}
+.user_card_main .user_card_item .user_card_item_font1 {
+  position: absolute;
+  top: 32rpx;
+  left: 110rpx;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: 550;
+}
+.user_card_main .user_card_item .user_card_item_font2 {
+  position: absolute;
+  top: 76rpx;
+  left: 110rpx;
+  font-size: 28rpx;
+  color: #fff;
+  font-weight: 300;
+}
+.user_card_main .user_card_item .user_card_item_font3 {
+  position: absolute;
+  top: 150rpx;
+  left: 110rpx;
+  font-size: 30rpx;
+  color: #fff;
+  font-weight: 600;
+}
+.user_card_main .user_card_add {
+  width: 100%;
+}

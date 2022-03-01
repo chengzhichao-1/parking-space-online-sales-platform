@@ -1,0 +1,75 @@
+<view class="open_main">
+  <!-- 搜索栏 -->
+  <view class="open_search">
+    <!-- 搜索城市 -->
+    <view class="open_search_city">
+      <navigator url="/pages/search_city/index" open-type="navigate">
+        {{city||locateCity||"请选择"}}
+        <text class="iconfont icon-arrow_down"></text>
+      </navigator>  
+    </view>
+    <!-- 搜索车位 -->
+    <view class="open_search_park">
+      <input model:value="{{name}}" type="text" placeholder="请输入您要搜索的车位名称" bindinput="handleInput"/>
+
+      <view class="index_search_image3">
+        <image src="../../icons/index3.png" mode="widthFix"/>
+      </view>
+      
+      <view class="index_search_image6" bindtap="searchClick">
+        <image src="../../icons/index6.png"/>
+        <text>搜 索</text>
+      </view>
+
+    </view>  
+  </view>
+  <!-- 车位项目 -->
+  <!-- <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange"> -->
+    <!-- 未开始认筹 -->
+    <!-- <block wx:if="{{tabs[0].isActive}}"> -->
+
+  <view class="open_select">
+    <Select select-current="new" class="open_select_item" id="select" options="{{options1}}" key="id" text="name" bind:change="change"  data-option="1"></Select>
+    <Select select-current="new" class="open_select_item" id="select1" options="{{options2}}" key="id" text="name" bind:change="change"  data-option="2"></Select>
+    <Select select-current="new" class="open_select_item" id="select2" options="{{options3}}" key="id" text="name" bind:change="change"  data-option="3"></Select>
+    <Select select-current="new" class="open_select_item" id="select3" options="{{options4}}" key="id" text="name" bind:change="change"  data-option="4"></Select>   
+  </view>
+    
+
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="first_tab">
+      <navigator class="park_item"
+      url="/pages/park_details/index?park_id={{item.communityId}}"
+      >
+        <!-- 左侧 图片容器 -->
+        <view class="park_img_wrap">
+          <image mode="scaleToFill" src="{{item.coverUrl}}"></image>
+        </view>
+        <!-- 右侧 商品容器 -->
+        <view class="park_info_wrap">
+          <view class="park_name_star">
+            <view class="park_name">{{item.name}}车位</view>
+            <view catchtap="collectClick" data-index="{{index}}" class="park_star" data-communityid="{{item.communityId}}">
+              <image wx:if="{{item.hasCollect}}" src="../../icons/star-active.png" mode="widthFix"/>
+              <image wx:else src="../../icons/star.png" mode="widthFix"/>
+            </view>
+              
+          </view>
+            
+          <view wx:if="{{item.highestPrice==item.lowestPrice}}" class="park_price">{{item.lowestPrice}}元</view>
+          <view wx:else class="park_price">{{item.lowestPrice}}元~{{item.highestPrice}}元</view>
+          
+          <view class="park_region">{{item.place}}</view>
+          <view class="park_state"> 
+            <view class="park_state_text">{{item.openState?'已开盘':'未开盘'}}</view>
+            <view wx:if="{{!item.openState}}" class="park_state_text">{{item.recognizeState?'已开始认筹':'未开始认筹'}}</view>  
+          </view>
+          <view wx:if="{{item.openState}}" class="park_time">收盘时间：{{item.closeDate}}</view>
+          <view wx:elif="{{item.recognizeState}}" class="park_time">开盘时间：{{item.openDate}}</view>
+          <view wx:else class="park_time">认筹时间：{{item.recognizeDate}}</view>
+          
+        </view>
+      </navigator>
+    </view>  
+  </block>
+</view>

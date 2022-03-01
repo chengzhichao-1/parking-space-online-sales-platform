@@ -1,0 +1,103 @@
+Page {
+  background-color: #eee;
+}
+.pay_rest_main {
+  margin: 20rpx auto;
+  width: 690rpx;
+}
+.pay_rest_main .pay_rest_details {
+  width: 100%;
+  border-radius: 10rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+.pay_rest_main .pay_rest_details .pay_rest_details_title {
+  font-weight: 600;
+  font-size: 32rpx;
+  text-align: left;
+  margin-bottom: 30rpx;
+}
+.pay_rest_main .pay_rest_details .pay_rest_details_username_wrap {
+  overflow: hidden;
+}
+.pay_rest_main .pay_rest_details .pay_rest_details_username_wrap .pay_rest_details_username {
+  color: #333;
+  float: left;
+  margin-right: 30rpx;
+  text-align: right;
+  width: 140rpx;
+}
+.pay_rest_main .pay_rest_details .pay_rest_details_username_wrap .pay_rest_details_username_name {
+  float: left;
+}
+.pay_rest_main .pay_rest_know {
+  width: 100%;
+  border-radius: 10rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+.pay_rest_main .pay_rest_know .pay_rest_know_title {
+  font-weight: 600;
+  font-size: 32rpx;
+  text-align: left;
+  margin-bottom: 30rpx;
+}
+.pay_rest_main .pay_rest_know .pay_rest_know_item {
+  color: #333;
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+}
+.pay_rest_item {
+  position: fixed;
+  bottom: 160rpx;
+  width: 100%;
+}
+.pay_rest_item checkbox-group {
+  width: 100%;
+  text-align: center;
+}
+.pay_rest_item checkbox-group checkbox {
+  width: 20rpx;
+  height: 20rpx;
+}
+.pay_rest_item checkbox-group text {
+  font-size: 20rpx;
+}
+.pay_rest_button_wrap {
+  position: fixed;
+  bottom: 20rpx;
+  height: 90rpx;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+.pay_rest_button_wrap .pay_rest_button_money {
+  width: 300rpx;
+  margin: 0 auto;
+  line-height: 90rpx;
+  text-align: left;
+}
+.pay_rest_button_wrap .pay_rest_button_money .pay_rest_button_money_title {
+  float: left;
+  color: #333;
+}
+.pay_rest_button_wrap .pay_rest_button_money .pay_rest_button_money_msg {
+  float: left;
+  color: var(--themeColor);
+}
+.pay_rest_button_wrap .pay_rest_button_button {
+  float: right;
+  margin-right: 20rpx;
+  color: #fff;
+  font-weight: 500;
+  font-size: 30rpx;
+  background-color: var(--themeColor);
+  border-radius: 36rpx;
+  width: 170rpx;
+  height: 70rpx;
+  margin-top: 10rpx;
+  line-height: 70rpx;
+  text-align: center;
+}

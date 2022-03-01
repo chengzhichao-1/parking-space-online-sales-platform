@@ -1,0 +1,155 @@
+<view class="details_main">
+  <!-- 顶部提醒栏 -->
+  <view wx:if="{{park_details.openState}}" class="details_top">{{park_details.closeDate}} 收盘</view>
+  <view wx:elif="{{park_details.recognizeState}}" class="details_top">{{park_details.openDate}} 开盘 敬请期待</view>
+  <view wx:else class="details_top">{{park_details.recognizeDate}} 开始认筹 敬请期待</view>
+  <!-- 图片 -->
+  <view class="details_image_wrap">
+    <image class="" src="{{park_details.coverUrl}}" mode="scaleToFill"/>
+  </view>
+  <!-- 车位详情 --> 
+  <view class="details_info_wrap">
+    <view class="details_name_area_star">
+      <view class="details_name">
+        {{park_details.name}}车位
+      </view>  
+      <view class="details_area">
+        {{park_details.place}}
+      </view>
+      <view bindtap="collectClick" class="details_star">
+        <image src="{{park_details.hasCollect?'../../icons/star-active.png':'../../icons/star.png'}}" mode="widthFix"/>
+      </view>
+    </view>
+    <view class="details_state">
+      <view class="details_state_text">{{park_details.openState?'已开盘':'未开盘'}}</view>
+      <view wx:if="{{!park_details.openState&&park_details.recognizeState}}" class="details_state_text">已开始认筹</view>  
+      <view wx:elif="{{!park_details.openState&&!park_details.recognizeState}}" class="details_state_text">未开始认筹</view> 
+    </view>
+      
+    
+
+    <view class="details_address">
+      {{park_details.placeDetail}}
+    </view>
+    <view class="details_priceAndArea">
+      <view class="details_price">
+        <view class="details_price_title">
+          车位价格
+        </view>
+        <view wx:if="{{park_details.lowestPrice==park_details.highestPrice}}" class="details_price_num">
+          {{park_details.lowestPrice}}元
+        </view>
+        <view wx:else class="details_price_num">
+          {{park_details.lowestPrice}}元~{{park_details.highestPrice}}元
+        </view>
+      </view>
+      <view class="details_area">
+        <view class="details_area_title">
+          车位面积(平方米)
+        </view>
+        <view class="details_area_num">
+          {{park_details.parkingArea}}
+        </view>
+      </view>
+    </view>
+    
+    <view wx:if="{{park_details.discount.length!==0}}" class="details_activity_wrap">
+      <view class="details_activity_title">
+        优惠活动
+      </view>
+      <view class="details_activity_range">
+        前10000名户主：
+      </view>
+      <view class="details_activity_content">
+        <view class="details_activity_content_item">
+          减免20%手续费
+        </view>
+        <view class="details_activity_content_item">
+          减免2.5%车位费用
+        </view>  
+        <view class="details_activity_content_item">
+          线上礼品抽奖
+        </view> 
+      </view>
+    </view>
+    
+    <view class="details_item_info">
+      <view class="details_item_title">
+        小区车位信息
+      </view>
+      <view class="details_park_num_wrap">
+        <view class="details_park_num_title">
+          车位个数：
+        </view>
+        <view class="details_park_num">
+          {{park_details.parkingNum}}个
+        </view>
+      </view>
+      <view class="details_park_category_wrap">
+        <view class="details_park_category_title">
+          车位分类：
+        </view>
+        <view class="details_park_category">
+          {{park_details.parkingCategory}}
+        </view>
+      </view>
+      <view class="details_park_developer_wrap">
+        <view class="details_park_developer_title">
+          开发商：
+        </view>
+        <view class="details_park_developer">
+          {{park_details.developers}}
+        </view>
+      </view>
+      <view class="details_park_property_wrap">
+        <view class="details_park_property_title">
+          物业公司：
+        </view>
+        <view class="details_park_property">
+          {{park_details.propertyCompany}}
+        </view>
+      </view>  
+    </view>
+
+    <view class="details_park_image_wrap">
+      <view class="details_park_image_title">
+        车位展示图
+      </view>
+      <view wx:if="{{park_details.planPics.length!==0}}" class="details_park_image">
+        <image src="{{park_details.planPics[0]}}" mode="scaleToFill"/>
+      </view>
+      <view wx:else class="details_park_image">
+        <image src="{{park_details.liftingPics[0]}}" mode="scaleToFill"/>
+      </view>
+    </view>
+
+    <view class="details_park_image_wrap">
+      <view class="details_park_image_title">
+        车位平面图
+      </view>
+      <view class="details_park_image">
+        <image src="{{park_details.parkingPlanPic}}" mode="scaleToFill"/>
+      </view>
+    </view>
+
+    <view class="details_park_image_wrap">
+      <view class="details_park_image_title">
+        车位证照
+      </view>
+      <view class="details_park_image">
+        <image src="{{park_details.licensePic}}" mode="scaleToFill"/>
+      </view>
+    </view>
+      
+
+    <navigator wx:if="{{park_details.openState}}" class="details_park_payMoney"
+    url="/pages/park_pick/index?park_id={{park_id}}&money={{park_details.lowestPrice}}">
+      <view class="details_park_payMoney_btn">车 位 挑 选</view>
+    </navigator>
+    <navigator wx:else class="details_park_payMoney" url="/pages/pay_renchou/index?park_id={{park_id}}&money={{park_details.lowestPrice}}&parkName={{park_details.name}}">
+      <view class="details_park_payMoney_btn">缴 纳 认 筹 金</view>
+    </navigator>
+      
+  </view>
+</view>
+  

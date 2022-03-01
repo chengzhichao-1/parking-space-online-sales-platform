@@ -1,0 +1,9 @@
+<view class="invite_main">
+  <image class="invite_main_image" src="../../icons/invite1.png" mode="widthFix"/>
+  <image class="invite_main_image5" src="../../icons/invite5.png" mode="widthFix"/>
+  <image class="invite_main_image4" src="../../icons/invite4.png" mode="widthFix"/>
+  <image class="invite_main_image2" src="../../icons/invite2.png" mode="widthFix"/>
+  <image bindtap="click" class="invite_main_image3" src="../../icons/invite3.png" mode="widthFix"/>
+   
+</view>
+   

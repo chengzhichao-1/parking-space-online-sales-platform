@@ -1,0 +1,48 @@
+<view class="user_card_add_main">
+  <view class="user_card_add_font1">
+    添加银行卡
+  </view>
+  <view class="user_card_add_font2">
+    请绑定持卡人本人的银行卡
+  </view>
+
+  <view class="user_card_add_form">
+    <view class="user_card_add_item">
+      <view class="user_card_add_item_left">
+        持卡人
+      </view>
+      <view class="user_card_add_item_right">
+        {{name}}
+        <image class="image1" src="../../icons/user_card_add1.png" mode="widthFix"/>
+      </view>
+    </view>
+    <view class="user_card_add_item">
+      <view class="user_card_add_item_left">
+        卡号
+      </view>
+      <view class="user_card_add_item_right">
+        <input model:value="{{card}}" type="number" placeholder="请输入卡号"/>
+        <image class="image2" src="../../icons/user_card_add2.png" mode="widthFix"/>
+      </view>
+    </view>
+    <view class="user_card_add_item">
+      <view class="user_card_add_item_left">
+        卡类型
+      </view>
+      <view class="user_card_add_item_right">
+        <Select select-current="new" class="select" id="select" options="{{options}}" key="id" text="name" bind:change="change"></Select>
+      </view>
+    </view>
+  </view>
+
+  <view class="user_card_other_image">
+    <image class="image2" src="../../icons/user_card2.jpg" mode="widthFix"/>
+  </view>
+    
+  <view bindtap="addCard" class="user_card_add_btn">
+    添加
+  </view>
+      
+    
+</view>
+  

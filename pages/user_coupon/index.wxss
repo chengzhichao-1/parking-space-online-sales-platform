@@ -1,0 +1,74 @@
+Page {
+  background-color: #eee;
+}
+.user_coupon_main {
+  margin: 36rpx 36rpx;
+  width: 100%;
+}
+.user_coupon_main .user_coupon_item_wrap {
+  margin-bottom: 30rpx;
+  height: 234rpx;
+  width: 686rpx;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item {
+  position: relative;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_image1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 686rpx;
+  border-radius: 20rpx;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_image2 {
+  position: absolute;
+  top: 40rpx;
+  left: 40rpx;
+  width: 104rpx;
+  border-radius: 50%;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_image3 {
+  position: absolute;
+  top: 180rpx;
+  left: 520rpx;
+  width: 114rpx;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_font1 {
+  position: absolute;
+  top: 50rpx;
+  left: 160rpx;
+  font-size: 32rpx;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_font2 {
+  position: absolute;
+  top: 100rpx;
+  left: 160rpx;
+  font-size: 20rpx;
+  color: #dcdcdc;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_font3 {
+  position: absolute;
+  top: 180rpx;
+  left: 40rpx;
+  font-size: 20rpx;
+  color: #dcdcdc;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_font4 {
+  position: absolute;
+  top: 50rpx;
+  left: 500rpx;
+  color: var(--themeColor);
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_font4 .user_coupon_item_font4_1 {
+  font-size: 20rpx;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_font4 .user_coupon_item_font4_1 {
+  font-size: 40rpx;
+}
+.user_coupon_main .user_coupon_item_wrap .user_coupon_item .user_coupon_item_font5 {
+  position: absolute;
+  top: 184rpx;
+  left: 536rpx;
+  color: #fff;
+  font-size: 24rpx;
+}

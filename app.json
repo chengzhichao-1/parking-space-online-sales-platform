@@ -1,0 +1,76 @@
+{
+  "pages":[
+    "pages/index/index", 
+    "pages/open/index",    
+    "pages/collect/index",
+    "pages/user/index",
+    "pages/search_city/index",
+    "pages/search_park/index",
+    "pages/park_details/index",
+    "pages/identification/index",
+    "pages/pay_rest/index",
+    "pages/pay_front/index",
+    "pages/pay_renchou/index",
+    "pages/park_pick/index",
+    "pages/yaohao/index", 
+    "pages/yaohao_search/index", 
+    "pages/invite/index",
+    "pages/user_invite/index",
+    "pages/user_card/index",
+    "pages/user_card_add/index",
+    "pages/user_card_delete/index",
+    "pages/user_order/index",
+    "pages/user_yaohao/index",
+    "pages/user_coupon/index",
+    "pages/user_data/index",
+    "pages/user_loan/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0089ff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#0089ff",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/index.png",
+        "selectedIconPath": "icons/index-active.png"
+      },
+      {
+        "pagePath": "pages/open/index",
+        "text": "开盘",
+        "iconPath": "icons/open.png",
+        "selectedIconPath": "icons/open-active.png"
+      }
+      ,
+      {
+        "pagePath": "pages/collect/index",
+        "text": "我的收藏",
+        "iconPath": "icons/collect.png",
+        "selectedIconPath": "icons/collect-active.png"
+      }
+      ,
+      {
+        "pagePath": "pages/user/index",
+        "text": "个人中心",
+        "iconPath": "icons/user.png",
+        "selectedIconPath": "icons/user-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission":{
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

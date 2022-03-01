@@ -1,0 +1,36 @@
+<view class="user_card_main">
+  <view bindtap="cardClick" data-index="{{index}}" style="{{item.name=='建设银行'?'background-color:rgb(26,102,162)':'background-color:rgb(198,80,86)'}}" 
+  wx:for="{{card}}" wx:key="index" 
+  class="user_card_item">
+    <view class="user_card_item_icon1">
+      <image class="" src="{{item.name=='建设银行'?'../../icons/user_card_jianshe_active.png':'../../icons/user_card_gongshang_active.png'}}" mode="widthFix"/>
+    </view>
+
+    <view class="user_card_item_icon2">
+      <image class="" src="{{item.name=='建设银行'?'../../icons/user_card_jianshe.png':'../../icons/user_card_gongshang.png'}}" mode="widthFix"/>
+    </view>
+    
+    <view class="user_card_item_font1">
+      {{item.name}}
+    </view>
+
+    <view class="user_card_item_font2">
+      储蓄卡
+    </view>
+
+    <view class="user_card_item_font3">
+      ···· ···· ···· {{item.code}}
+    </view>
+      
+      
+  </view>
+   
+  <view class="user_card_add">
+    <navigator url="/pages/user_card_add/index" hover-class="navigator-hover" open-type="navigate">
+      <image src="../../icons/user_card_add.png" mode="widthFix"/>
+    </navigator>
+      
+  </view>
+    
+</view>
+  

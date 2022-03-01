@@ -1,0 +1,62 @@
+<view class="user_loan_main">
+  <image class="" src="../../icons/user_loan1.jpg" mode="widthFix"/>
+  <view class="user_loan_contain">
+    <view class="user_loan_contain_money">
+      借 <input type="number" model:value="{{loan_money}}" value="100000"/>
+    </view>
+
+    <view class="user_loan_contain_last_title">
+      借多久
+    </view>
+      
+    <view class="user_loan_contain_last">
+      <view bindtap="click1" style="{{currentChoose==3?'border: 1rpx solid var(--themeColor);':'border: 1rpx solid #eee;'}}" class="user_loan_contain_last_item">
+        3个月
+      </view>
+      <view bindtap="click2" style="{{currentChoose==6?'border: 1rpx solid var(--themeColor);':'border: 1rpx solid #eee;'}}" class="user_loan_contain_last_item">
+        6个月
+      </view>
+      <view bindtap="click3" style="{{currentChoose==12?'border: 1rpx solid var(--themeColor);':'border: 1rpx solid #eee;'}}" class="user_loan_contain_last_item">
+        12个月
+      </view>
+    </view>
+
+    <view class="user_loan_contain_backplan">
+      <view class="user_loan_contain_backplan_title">
+        还款计划
+      </view>
+      <view class="user_loan_contain_backplan_text">
+        每月还款￥{{loan_money*1.08/currentChoose}}
+      </view>
+    </view>
+
+    <view class="user_loan_contain_coupon">
+      <view class="user_loan_contain_coupon_title">
+        优惠券
+      </view>
+      <view class="user_loan_contain_coupon_text">
+        14天免息券
+      </view>
+    </view>
+
+    <view class="user_loan_contain_card">
+      <view class="user_loan_contain_card_title">
+        收款卡
+      </view>
+      <view class="user_loan_contain_card_text">
+        <image src="../../icons/user_loan2.png" mode="widthFix"/>
+          
+      </view>
+    </view>
+      
+    <image class="user_loan_contain_tips" src="../../icons/user_loan3.png" mode="widthFix"/>
+
+    <view bindtap="click4" class="user_loan_contain_btn">
+      申请借钱
+    </view>
+      
+
+  </view> 
+      
+</view>
+  

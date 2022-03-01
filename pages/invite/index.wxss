@@ -1,0 +1,31 @@
+.invite_main {
+  width: 750rpx;
+}
+.invite_main .invite_main_image {
+  width: 100%;
+  position: relative;
+}
+.invite_main .invite_main_image5 {
+  position: absolute;
+  top: 240rpx;
+  left: 110rpx;
+  width: 72%;
+}
+.invite_main .invite_main_image4 {
+  position: absolute;
+  top: 380rpx;
+  left: 80rpx;
+  width: 80%;
+}
+.invite_main .invite_main_image2 {
+  position: absolute;
+  top: 640rpx;
+  left: 160rpx;
+  width: 55%;
+}
+.invite_main .invite_main_image3 {
+  position: absolute;
+  top: 670rpx;
+  left: 220rpx;
+  width: 38%;
+}

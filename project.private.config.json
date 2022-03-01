@@ -1,0 +1,150 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "开盘",
+          "pathName": "pages/open/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索城市",
+          "pathName": "pages/search_city/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "车位详情",
+          "pathName": "pages/park_details/index",
+          "query": "park_id=11",
+          "scene": null
+        },
+        {
+          "name": "收藏",
+          "pathName": "pages/collect/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "身份认证",
+          "pathName": "pages/identification/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付尾款",
+          "pathName": "pages/pay_rest/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付定金",
+          "pathName": "pages/pay_front/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付认筹金",
+          "pathName": "pages/pay_renchou/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "车位挑选",
+          "pathName": "pages/park_pick/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "车位选择",
+          "pathName": "pages/park_pick/index",
+          "query": "park_id=11",
+          "scene": null
+        },
+        {
+          "name": "车位摇号",
+          "pathName": "pages/yaohao/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "摇号查询",
+          "pathName": "pages/yaohao_search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "邀请好友",
+          "pathName": "pages/invite/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的邀请好友",
+          "pathName": "pages/user_invite/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的银行卡",
+          "pathName": "pages/user_card/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "添加银行卡",
+          "pathName": "pages/user_card_add/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的订单",
+          "pathName": "pages/user_order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人资料",
+          "pathName": "pages/user_data/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的优惠券",
+          "pathName": "pages/user_coupon/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "用户借款",
+          "pathName": "pages/user_loan/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

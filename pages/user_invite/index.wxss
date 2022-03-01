@@ -1,0 +1,107 @@
+.user_invite_main .user_invite_top_wrap {
+  position: relative;
+}
+.user_invite_main .user_invite_top_wrap .user_invite_top_text {
+  margin-top: 40rpx;
+  font-size: 36rpx;
+  font-weight: 550;
+  text-align: center;
+}
+.user_invite_main .user_invite_top_wrap .user_invite_contain_tixian {
+  position: absolute;
+  right: 70rpx;
+  top: 4rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.user_invite_main .user_invite_top_wrap .user_invite_top__ {
+  margin: 24rpx auto;
+  width: 80rpx;
+  height: 1rpx;
+  border-bottom: 4rpx solid #eee;
+}
+.user_invite_main .user_invite_top_wrap .user_invite_number {
+  margin-top: 40rpx;
+  display: flex;
+}
+.user_invite_main .user_invite_top_wrap .user_invite_number .user_invite_number1 {
+  flex: 1;
+  text-align: center;
+}
+.user_invite_main .user_invite_top_wrap .user_invite_number .user_invite_number1 .user_invite_number1_1 {
+  font-size: 40rpx;
+  color: var(--themeColor);
+}
+.user_invite_main .user_invite_top_wrap .user_invite_number .user_invite_number1 .user_invite_number1_3 {
+  font-size: 40rpx;
+  color: #e9533c;
+}
+.user_invite_main .user_invite_top_wrap .user_invite_number .user_invite_number1 .user_invite_number1_2 {
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.user_invite_main .user_invite_top_wrap .user_invite_rule_wrap {
+  padding: 68rpx 48rpx 56rpx 48rpx;
+  border-bottom: 20rpx solid #eee;
+}
+.user_invite_main .user_invite_top_wrap .user_invite_rule_wrap .user_invite_rule_text {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 50rpx;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_text {
+  margin-top: 40rpx;
+  font-size: 36rpx;
+  font-weight: 550;
+  text-align: center;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain__ {
+  margin: 24rpx auto;
+  width: 80rpx;
+  height: 1rpx;
+  border-bottom: 4rpx solid #eee;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_people {
+  padding: 0 48rpx;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_people .user_invite_contain_people_item_title {
+  font-size: 24rpx;
+  color: #999;
+  display: flex;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_people .user_invite_contain_people_item_title .user_invite_contain_people_item_left {
+  flex: 1;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_people .user_invite_contain_people_item_title .user_invite_contain_people_item_right {
+  flex: 1;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_people .user_invite_contain_people_item {
+  display: flex;
+  height: 130rpx;
+  line-height: 130rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_people .user_invite_contain_people_item .user_invite_contain_people_item_left {
+  flex: 1;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_people .user_invite_contain_people_item .user_invite_contain_people_item_left image {
+  float: left;
+  margin-top: 20rpx;
+  width: 90rpx;
+  border-radius: 50%;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_people .user_invite_contain_people_item .user_invite_contain_people_item_left view {
+  float: left;
+  line-height: 130rpx;
+  margin-left: 40rpx;
+}
+.user_invite_main .user_invite_contain_wrap .user_invite_contain_people .user_invite_contain_people_item .user_invite_contain_people_item_right {
+  flex: 1;
+  text-align: center;
+}

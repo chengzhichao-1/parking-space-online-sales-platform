@@ -1,0 +1,142 @@
+<view class="index_main">
+  <view class="index_search">
+    <image class="index_search_image2" src="../../icons/index20.png" mode="widthFix"/>
+    <!-- 搜索城市 -->
+    <view class="index_search_city">
+      <navigator url="/pages/search_city/index" open-type="navigate">
+        {{city||locateCity||"请选择"}}
+        <text class="iconfont icon-arrow_down"></text>
+      </navigator>  
+    </view>
+    <!-- 搜索车位 -->
+    <view class="index_search_park">
+      <navigator url="/pages/search_park/index" open-type="navigate">请输入车位名称</navigator>  
+    </view>  
+
+    <view class="index_search_image3">
+      <image src="../../icons/index3.png" mode="widthFix"/>
+    </view>
+
+    <view class="index_search_image6">
+      <image src="../../icons/index6.png"/>
+      <text>搜 索</text>
+    </view>
+      
+
+    <swiper class="index_search_swiper" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" autoplay="true" 
+      interval="3000" duration="1000">
+      <swiper-item>
+        <image src="../../icons/index4.png"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../icons/index5.png"/>
+      </swiper-item>
+    </swiper>
+      
+  </view>
+  
+  <view class="index_position">
+    <view class="index_position_image" bindtap="scroll1">
+      <image style="margin-top:-14rpx" src="../../icons/index8.png" mode="widthFix"/>
+      <text>开盘预热</text>
+    </view>
+    <view class="index_position_image" bindtap="scroll2">
+      <image src="../../icons/index7.png" mode="widthFix"/>
+      <text>我要推荐</text>
+    </view>
+    <view class="index_position_image" bindtap="scroll3">
+      <image src="../../icons/index9.png" mode="widthFix"/>
+      <text>项目展示</text>
+    </view>
+    <view class="index_position_image">
+      <image src="../../icons/index9.png" mode="widthFix"/>
+      <text>我的收藏</text>
+    </view>
+  </view>
+
+  <view class="index_advantage">
+    <view class="index_advantage_image">
+      <image style="margin-bottom:6rpx" src="../../icons/index12.png" mode="widthFix"/>
+      <view>地段选择</view>
+    </view>
+    <view class="index_advantage_image">
+      <image src="../../icons/index11.png" mode="widthFix"/>
+      <view>编辑推荐</view>
+    </view>
+    <view class="index_advantage_image">
+      <image src="../../icons/index10.png" mode="widthFix"/>
+      <view>性价比高</view>
+    </view>
+    <view class="index_advantage_image">
+      <image src="../../icons/index13.png" mode="widthFix"/>
+      <view>购买指南</view>
+    </view>
+    <view class="index_advantage_image">
+      <image src="../../icons/index21.png" mode="widthFix"/>
+      <view>添加收藏</view>
+    </view>
+  </view>
+    
+  <view class="index_hot">
+    <view class="index_hot_title">
+      <image src="../../icons/index14.png" mode="widthFix"/>
+    </view>
+    <view class="index_hot_image">
+      <image bindtap="gotoOpen" style="margin-right: 20rpx" src="../../icons/index18.png" mode="widthFix"/>
+      <image style="margin: 0 10rpx" src="../../icons/index16.png" mode="widthFix"/>
+      <image style="margin-left: 20rpx" src="../../icons/index17.png" mode="widthFix"/> 
+    </view>
+  </view>
+    
+  <view class="index_recommend">
+    <button open-type="share"><image src="../../icons/index19.png" mode="widthFix"/></button>
+  </view>
+    
+  <view class="index_show">
+    <view class="index_show_title">
+      <image src="../../icons/index15.png" mode="widthFix"/> 
+    </view>
+    <view class="index_show_title_bottom">
+      
+    </view>
+      
+    <block wx:for="{{list}}" wx:key="index">
+      <view class="first_tab">
+        <navigator class="park_item"
+        url="/pages/park_details/index?park_id={{item.communityId}}"
+        >
+          <!-- 左侧 图片容器 -->
+          <view class="park_img_wrap">
+            <image mode="scaleToFill" src="{{item.coverUrl}}"></image>
+          </view>
+          <!-- 右侧 商品容器 -->
+          <view class="park_info_wrap">
+            <view class="park_name_star">
+              <view class="park_name">{{item.name}}车位</view>
+              <!-- <view catchtap="collectClick" data-index="{{index}}" class="park_star" data-communityid="{{item.communityId}}">
+                <image wx:if="{{item.hasCollect}}" src="../../icons/star-active.png" mode="widthFix"/>
+                <image wx:else src="../../icons/star.png" mode="widthFix"/>
+              </view> -->
+                
+            </view>
+              
+            <view wx:if="{{item.highestPrice==item.lowestPrice}}" class="park_price">{{item.lowestPrice}}元</view>
+            <view wx:else class="park_price">{{item.lowestPrice}}元~{{item.highestPrice}}元</view>
+            
+            <view class="park_region">{{item.place}}</view>
+            <view class="park_state"> 
+              <view class="park_state_text">{{item.openState?'已开盘':'未开盘'}}</view>
+              <view wx:if="{{!item.openState}}" class="park_state_text">{{item.recognizeState?'已开始认筹':'未开始认筹'}}</view>  
+            </view>
+            <view wx:if="{{item.openState}}" class="park_time">收盘时间：{{item.closeDate2}}</view>
+            <view wx:elif="{{item.recognizeState}}" class="park_time">开盘时间：{{item.openDate2}}</view>
+            <view wx:else class="park_time">认筹时间：{{item.recognizeDate2}}</view>
+            
+          </view>
+        </navigator>
+      </view>  
+    </block>  
+  </view>
+    
+</view>
+   

@@ -1,0 +1,388 @@
+<view class="user_order_main">
+  <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange" >
+    <!-- <view class="user_order_ad">
+      <image src="../../icons/index5.png" mode="widthFix"/>
+    </view> -->
+      
+    <!-- 全部 -->
+    <block wx:if="{{tabs[0].isActive}}">
+      <!-- 待审批 -->
+
+      <!-- 已认筹 -->
+      <view wx:if="{{item.isSign==false&&item.depositState==false}}" wx:for="{{list}}" wx:key="id" class="user_order_item_wrap">
+        <view class="user_order_item">
+          <view class="user_order_item_title">
+            <image src="../../icons/user_order1.png" mode="widthFix"/>
+            <view>
+              {{item.wholePlace}} <text decode="true"> &gt;</text>
+            </view>
+          </view>
+          <view class="user_order_item_image">
+            <image src="{{item.coverUrl}}" mode="scaleToFill"/>
+          </view>
+          <view class="user_order_item_number">
+            订单编号{{item.orderNo}}
+          </view>
+          <view class="user_order_item_number2">
+            订单编号{{item.orderNo}}
+          </view>
+          <view class="user_order_item_payDate">
+            于{{item.payDateTime}}完成交易
+          </view>
+          <view class="user_order_item_totalPrice">
+            ￥{{item.lowestPrice*0.05}}元
+          </view>
+          <view class="user_order_item_msg">
+            <text style="color: black;font-weight:500;">已付认筹金￥{{item.lowestPrice*0.05}}元</text>
+          </view>
+
+          <view class="user_order_item_btn">
+            查看详情
+          </view>
+          <view class="user_order_item_btn2">
+            摇号查询
+          </view>
+          <view class="user_order_item_btn3">
+            去摇号
+          </view>    
+          <view class="user_order_item_more">
+            更多
+          </view>
+        </view>   
+      </view> 
+      <!-- 待签约 -->
+      <view wx:if="{{item.isSign==false&&item.depositState==true}}" wx:for="{{list}}" wx:key="index"  class="user_order_item_wrap">
+        <view class="user_order_item">
+          <view class="user_order_item_title">
+            <image src="../../icons/user_order1.png" mode="widthFix"/>
+            <view>
+              {{item.wholePlace}} <text decode="true"> &gt;</text>
+            </view>
+          </view>
+          <view class="user_order_item_image">
+            <image src="{{item.coverUrl}}" mode="scaleToFill"/>
+          </view>
+          <view class="user_order_item_number">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_number2">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_payDate">
+            于{{item.payDateTime}}完成交易
+          </view>
+          <view class="user_order_item_totalPrice">
+            ￥{{item.xiaoshuMoney}}w元
+          </view>
+          <view class="user_order_item_msg">
+            总价￥{{item.xiaoshuMoney}}w元，<text style="color: black;font-weight:500;">已付定金￥{{item.xiaoshuMoney*0.20}}w元</text>
+          </view>
+
+          <view class="user_order_item_btn">
+            查看详情
+          </view>
+          <view bindtap="qianyue" data-index="{{index}}" class="user_order_item_btn2">
+            签约
+          </view>   
+          <view class="user_order_item_more">
+            更多
+          </view>
+        </view>   
+      </view>
+      <!-- 待支付 -->
+      <view wx:if="{{item.isSign==true&&item.restState==false}}" wx:for="{{list}}" wx:key="id" class="user_order_item_wrap">
+        <view class="user_order_item">
+          <view class="user_order_item_title">
+            <image src="../../icons/user_order1.png" mode="widthFix"/>
+            <view>
+              {{item.wholePlace}} <text decode="true"> &gt;</text>
+            </view>
+          </view>
+          <view class="user_order_item_image">
+            <image src="{{item.coverUrl}}" mode="scaleToFill"/>
+          </view> 
+          <view class="user_order_item_number">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_number2">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_payDate">
+            于{{item.payDateTime}}完成交易
+          </view>
+          <view class="user_order_item_totalPrice">
+            ￥{{item.xiaoshuMoney}}w元
+          </view>
+          <view class="user_order_item_msg">
+            总价￥{{item.xiaoshuMoney}}w元，<text style="color: black;font-weight:500;">已付定金￥{{item.xiaoshuMoney*0.20}}w元</text>
+          </view>
+
+          <view class="user_order_item_btn">
+            查看详情
+          </view>
+          <view bindtap="loan" class="user_order_item_btn2">
+            申请借款
+          </view>   
+          <view class="user_order_item_btn3">
+            <navigator url="/pages/pay_rest/index?parkingId={{item.parkingId}}&partitionName={{item.partitionName}}&code={{item.code}}&price={{item.price}}" hover-class="navigator-hover" open-type="navigate">
+              支付尾款
+            </navigator>
+          </view> 
+          <view class="user_order_item_more">
+            更多
+          </view>
+        </view>   
+      </view>
+      <!-- 已完成 -->
+      <view wx:if="{{item.restState==true}}" wx:for="{{list}}" wx:key="id" class="user_order_item_wrap">
+        <view class="user_order_item">
+          <view class="user_order_item_title">
+            <image src="../../icons/user_order1.png" mode="widthFix"/>
+            <view>
+              {{item.wholePlace}} <text decode="true"> &gt;</text>
+            </view>
+          </view>
+          <view class="user_order_item_image">
+            <image src="{{item.coverUrl}}" mode="scaleToFill"/>
+          </view>
+          <view class="user_order_item_number">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_number2">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_payDate">
+            于{{item.payDateTime}}完成交易
+          </view>
+          <view class="user_order_item_totalPrice">
+            ￥{{item.xiaoshuMoney}}w元
+          </view>
+          <view class="user_order_item_msg">
+            总价￥{{item.xiaoshuMoney}}w元,优惠￥{{item.xiaoshuMoney*0.02}}w元,<text style="color: black;font-weight:500;">实付款￥{{item.xiaoshuMoney*0.98}}w元</text>
+          </view>
+
+          <view class="user_order_item_btn">
+            查看详情
+          </view>  
+          <view class="user_order_item_more">
+            更多
+          </view>
+            
+        </view>   
+      </view>
+    </block>
+    <!-- 待审批 -->
+    <block wx:elif="{{tabs[1].isActive}}">
+      <view    class="user_order_item_wrap">
+        <view class="user_order_item">
+          <view class="user_order_item_title">
+            <image src="../../icons/user_order1.png" mode="widthFix"/>
+            <view>
+              借钱 <text decode="true"> &gt;</text>
+            </view>
+          </view>
+          <view class="user_order_item_image">
+            <image src="../../icons/user_order8.jpg" mode="scaleToFill"/>
+          </view>
+          <view class="user_order_item_number">
+            订单编号 0012
+          </view>
+          <view class="user_order_item_number2">
+            订单编号 0012
+          </view>
+          <view class="user_order_item_payDate">
+            于2021-10-17完成交易
+          </view>
+          <view class="user_order_item_totalPrice">
+            申请金额￥100000元
+          </view>
+          <view class="user_order_item_msg">
+            <text style="color: black;font-weight:500;">状态：审批中</text>
+          </view>
+
+          <view class="user_order_item_btn">
+            查看详情
+          </view>
+          <view class="user_order_item_btn2">
+            重新申请
+          </view>  
+          <view class="user_order_item_more">
+            更多
+          </view>
+        </view>
+      </view>
+        
+    </block>
+    <!-- 已认筹 -->
+    <block wx:elif="{{tabs[2].isActive}}">
+      <view wx:if="{{item.isSign==false&&item.depositState==false}}" wx:for="{{list}}" wx:key="id" class="user_order_item_wrap">
+        <view class="user_order_item">
+          <view class="user_order_item_title">
+            <image src="../../icons/user_order1.png" mode="widthFix"/>
+            <view>
+              {{item.wholePlace}} <text decode="true"> &gt;</text>
+            </view>
+          </view>
+          <view class="user_order_item_image">
+            <image src="{{item.coverUrl}}" mode="scaleToFill"/>
+          </view>
+          <view class="user_order_item_number">
+            订单编号{{item.orderNo}}
+          </view>
+          <view class="user_order_item_number2">
+            订单编号{{item.orderNo}}
+          </view>
+          <view class="user_order_item_payDate">
+            于{{item.payDateTime}}完成交易
+          </view>
+          <view class="user_order_item_totalPrice">
+            ￥{{item.lowestPrice*0.05}}元
+          </view>
+          <view class="user_order_item_msg">
+            <text style="color: black;font-weight:500;">已付认筹金￥{{item.lowestPrice*0.05}}元</text>
+          </view>
+
+          <view class="user_order_item_btn">
+            查看详情
+          </view>
+          <view class="user_order_item_btn2">
+            摇号查询
+          </view>
+          <view class="user_order_item_btn3">
+            去摇号
+          </view>    
+          <view class="user_order_item_more">
+            更多
+          </view>
+        </view>   
+      </view>
+    </block>
+    <!-- 待签约 -->
+    <block wx:elif="{{tabs[3].isActive}}">
+      <view wx:if="{{item.isSign==false&&item.depositState==true}}" wx:for="{{list}}" wx:key="index"  class="user_order_item_wrap">
+        <view class="user_order_item">
+          <view class="user_order_item_title">
+            <image src="../../icons/user_order1.png" mode="widthFix"/>
+            <view>
+              {{item.wholePlace}} <text decode="true"> &gt;</text>
+            </view>
+          </view>
+          <view class="user_order_item_image">
+            <image src="{{item.coverUrl}}" mode="scaleToFill"/>
+          </view>
+          <view class="user_order_item_number">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_number2">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_payDate">
+            于{{item.payDateTime}}完成交易
+          </view>
+          <view class="user_order_item_totalPrice">
+            ￥{{item.xiaoshuMoney}}w元
+          </view>
+          <view class="user_order_item_msg">
+            总价￥{{item.xiaoshuMoney}}w元，<text style="color: black;font-weight:500;">已付定金￥{{item.xiaoshuMoney*0.20}}w元</text>
+          </view>
+
+          <view class="user_order_item_btn">
+            查看详情
+          </view>
+          <view bindtap="qianyue" data-index="{{index}}" class="user_order_item_btn2">
+            签约
+          </view>   
+          <view class="user_order_item_more">
+            更多
+          </view>
+        </view>   
+      </view>
+    </block>
+    <!-- 待支付 -->
+    <block wx:elif="{{tabs[4].isActive}}">
+      <view wx:if="{{item.isSign==true&&item.restState==false}}" wx:for="{{list}}" wx:key="id" class="user_order_item_wrap">
+        <view class="user_order_item">
+          <view class="user_order_item_title">
+            <image src="../../icons/user_order1.png" mode="widthFix"/>
+            <view>
+              {{item.wholePlace}} <text decode="true"> &gt;</text>
+            </view>
+          </view>
+          <view class="user_order_item_image">
+            <image src="{{item.coverUrl}}" mode="scaleToFill"/>
+          </view> 
+          <view class="user_order_item_number">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_number2">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_payDate">
+            于{{item.payDateTime}}完成交易
+          </view>
+          <view class="user_order_item_totalPrice">
+            ￥{{item.xiaoshuMoney}}w元
+          </view>
+          <view class="user_order_item_msg">
+            总价￥{{item.xiaoshuMoney}}w元，<text style="color: black;font-weight:500;">已付定金￥{{item.xiaoshuMoney*0.20}}w元</text>
+          </view>
+
+          <view class="user_order_item_btn">
+            查看详情
+          </view>
+          <view bindtap="loan" class="user_order_item_btn2">
+            申请借款
+          </view>   
+          <view class="user_order_item_btn3">
+            <navigator url="/pages/pay_rest/index?parkingId={{item.parkingId}}&partitionName={{item.partitionName}}&code={{item.code}}&price={{item.price}}" hover-class="navigator-hover" open-type="navigate">
+              支付尾款
+            </navigator>
+          </view> 
+          <view class="user_order_item_more">
+            更多
+          </view>
+        </view>   
+      </view>
+    </block>
+    <!-- 已完成 -->
+    <block wx:elif="{{tabs[5].isActive}}">
+      <view wx:if="{{item.restState==true}}" wx:for="{{list}}" wx:key="id" class="user_order_item_wrap">
+        <view class="user_order_item">
+          <view class="user_order_item_title">
+            <image src="../../icons/user_order1.png" mode="widthFix"/>
+            <view>
+              {{item.wholePlace}} <text decode="true"> &gt;</text>
+            </view>
+          </view>
+          <view class="user_order_item_image">
+            <image src="{{item.coverUrl}}" mode="scaleToFill"/>
+          </view>
+          <view class="user_order_item_number">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_number2">
+            {{item.partitionName}}编号{{item.code}}
+          </view>
+          <view class="user_order_item_payDate">
+            于{{item.payDateTime}}完成交易
+          </view>
+          <view class="user_order_item_totalPrice">
+            ￥{{item.xiaoshuMoney}}w元
+          </view>
+          <view class="user_order_item_msg">
+            总价￥{{item.xiaoshuMoney}}w元,优惠￥{{item.xiaoshuMoney*0.02}}w元,<text style="color: black;font-weight:500;">实付款￥{{item.xiaoshuMoney*0.98}}w元</text>
+          </view>
+
+          <view class="user_order_item_btn">
+            查看详情
+          </view>  
+          <view class="user_order_item_more">
+            更多
+          </view>
+            
+        </view>   
+      </view>
+    </block>
+  </Tabs>
+</view>
+  

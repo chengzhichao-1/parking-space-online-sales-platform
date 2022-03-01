@@ -1,0 +1,54 @@
+<view class="identification_main">
+  <view class="identification_form">
+    <form catchsubmit="formSubmit">
+      <view class="identification_info">
+        <view class="identification_name_wrap">
+          <view class="identification_name_text">
+            业主姓名
+          </view>
+          <view class="identification_name_input">
+            <input model:value="{{name}}" type="text" name="name" placeholder="请输入购楼处预留的姓名" />
+          </view>
+        </view>  
+        <view class="identification_name_wrap">
+          <view class="identification_name_text">
+            身份证
+          </view>
+          <view class="identification_name_input">
+            <input model:value="{{id}}" type="idcard" name="name" placeholder="请输入身份证" />
+          </view>
+        </view> 
+        <view class="identification_name_wrap">
+          <view class="identification_name_text">
+            手机号
+          </view>
+          <view class="identification_name_input">
+            <input model:value="{{phone}}" type="number" name="name" placeholder="请输入购楼处预留的手机号" />
+          </view>
+        </view> 
+        <view class="identification_check_wrap">
+          <view class="identification_check_text">
+            验证码
+          </view>
+          <view class="identification_check_input">
+            <input model:value="{{code}}" type="number" name="name" placeholder="请输入验证码" />
+          </view>
+          <view bindtap="countDown" class="identification_check_countdown">{{time==0?'获取验证码':time}}</view>
+        </view> 
+      </view>   
+      <view class="identification_item">
+        <checkbox-group bindchange="checkboxChange">
+          <checkbox color="#0089ff" value="checkbox1"></checkbox>
+        </checkbox-group>
+        <text>已阅读并同意</text>
+        <text class="themecolor">《朋贝科技实名认证服务协议》</text>
+        <text>协议条款</text>           
+      </view>
+      <view class="identification_button">
+        <button formType="submit">身份认证</button>
+      </view>
+    </form>
+  </view>
+    
+</view>
+  

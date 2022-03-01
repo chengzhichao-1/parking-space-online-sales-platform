@@ -1,0 +1,99 @@
+<view class="search_row">
+  <input value="{{inpValue}}" placeholder="请输入您要搜索的车位" bindinput="handleInput"> </input>
+  <button bindtap="handleCancel" hidden="{{!isFocus}}">取消</button>
+</view>
+<!-- <view class="search_content">
+  <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" class="search_item" wx:for="{{goods}}" wx:key="goods_id">
+    {{item.goods_name}}
+  </navigator>
+</view>  -->
+
+<map id="myMap"  scale="9" bindcontroltap="controltap" latitude="{{centerY}}" longitude="{{centerX}}" markers="{{markers}}" bindlabeltap="markertap" bindregionchange="regionchange" show-location>
+
+  <view class="viewlittle" bindtap="moveTolocation" >
+      <image style="width:60rpx; height:60rpx" src="../../icons/huidaoyuandian.png" ></image>
+  </view>
+
+
+  <!-- 弹窗 -->
+  <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}" >
+    <view class="zan-dialog__mask" bindtap="toggleDialog" />
+      <!-- 内容 -->
+      <view class="zan-dialog__container">
+
+        <view class="first_tab">
+          <navigator class="park_item"
+          url="/pages/park_details/index?park_id={{communityId}}"
+          >
+            <!-- 左侧 图片容器 -->
+            <view class="park_img_wrap">
+              <image mode="scaleToFill" src="{{coverUrl}}"></image>
+            </view>
+            <!-- 右侧 商品容器 -->
+            <view class="park_info_wrap">
+              <view class="park_name_star">
+                <view class="park_name">{{name}}车位</view>
+                  
+              </view>
+                
+              <view wx:if="{{highestPrice==lowestPrice}}" class="park_price">{{lowestPrice}}元</view>
+              <view wx:else class="park_price">{{lowestPrice}}元~{{highestPrice}}元</view>
+              
+              <view class="park_region">{{place}}</view>
+              <view class="park_state"> 
+                <view class="park_state_text">{{openState?'已开盘':'未开盘'}}</view>
+                <view wx:if="{{!openState}}" class="park_state_text">{{recognizeState?'已开始认筹':'未开始认筹'}}</view>  
+              </view>
+              <view wx:if="{{openState}}" class="park_time">收盘时间：{{closeDate}}</view>
+              <view wx:elif="{{recognizeState}}" class="park_time">开盘时间：{{openDate}}</view>
+              <view wx:else class="park_time">认筹时间：{{recognizeDate}}</view>
+              
+            </view>
+          </navigator>
+        </view>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- <view class="content">
+              <image class="zan-img" src='https://mutuan.com/uploads/image/20200114/76bb076b83357af1c31eb2636a8afca4.jpg'></image>
+              <view class="tips">
+                  <view class="lingyuanName">{{lingyuanName}}</view>
+                  
+                  <view class="adder">广东 珠海</view>
+                  <view class="price">
+                      <view class="jiage">门票价：300元起</view>
+                      <view class="juli">
+                          <icon class="iconfontlsda iconlocate-02"></icon>
+                          <text>50km</text>
+                      </view>
+                  </view>
+              </view>
+          </view> -->
+          
+      </view>
+  </view>
+
+</map>

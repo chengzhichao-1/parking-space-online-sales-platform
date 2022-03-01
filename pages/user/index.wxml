@@ -1,0 +1,96 @@
+<view class="user_main">
+  <view class="user_top">
+    <view class="user_top_image">
+      <image src="../../icons/user1.png" mode="widthFix"/>
+    </view>
+    <view wx:if="{{!hasUserInfo}}" bindtap="getUserProfile" class="user_top_image2">
+      <image src="../../icons/user8.png" mode="widthFix"/>
+    </view>
+    <view wx:else class="user_top_image2">
+      <image src="{{userInfo.avatarUrl}}" mode="widthFix"/>
+    </view>
+    
+    <view class="user_top_text1">
+      <view class="user_top_text1_1">
+        {{hasUserInfo?'6':'0'}}
+      </view>
+      <view class="user_top_text1_2">
+        订单
+      </view>
+    </view>
+    <view class="user_top_text2">
+      <view class="user_top_text1_1">
+        {{hasUserInfo?'4':'0'}}
+      </view>
+      <view class="user_top_text1_2">
+        收藏
+      </view>
+    </view>
+    <view class="user_top_text3">
+      <view class="user_top_text1_1">
+        {{hasUserInfo?'3':'0'}}
+      </view>
+      <view class="user_top_text1_2">
+        优惠券
+      </view>
+    </view>
+      
+
+    <view wx:if="{{!hasUserInfo}}" bindtap="getUserProfile" class="user_top_name">
+      未登录
+    </view>
+    <view wx:else class="user_top_name">
+      {{userInfo.nickName}}
+    </view>
+    <view class="user_top_quan">
+      {{hasUserInfo?'您的优惠券还有28天到期':'快来领取优惠券'}}
+    </view>
+    <view class="user_top_use">
+      去使用
+    </view> 
+  </view>
+  
+  <view class="user_content">
+    <view bindtap="myOrder" class="user_content_item">
+      <image src="../../icons/user9.png" mode="widthFix"/>
+      <text class="text1">我的订单</text>
+      <text class="iconfont icon-icon_arrow_right text2"></text>   
+    </view>
+    <view bindtap="myData" class="user_content_item">
+      <image src="../../icons/user3.png" mode="widthFix"/>
+      <text class="text1">个人资料</text>
+      <text class="iconfont icon-icon_arrow_right text2"></text>   
+    </view>
+    <view bindtap="myCard" class="user_content_item">
+      <image src="../../icons/user4.png" mode="widthFix"/>
+      <text class="text1">银行卡</text>
+      <text class="iconfont icon-icon_arrow_right text2"></text>   
+    </view>
+    <view bindtap="myInvite" class="user_content_item">
+      <image src="../../icons/user5.png" mode="widthFix"/>
+      <text class="text1">我的邀请客户</text>
+      <text class="iconfont icon-icon_arrow_right text2"></text>   
+    </view>
+    <view bindtap="myCoupon" class="user_content_item">
+      <image src="../../icons/user6.png" mode="widthFix"/>
+      <text class="text1">我的优惠券</text>
+      <text class="iconfont icon-icon_arrow_right text2"></text>   
+    </view>
+    <view bindtap="myYaohao" class="user_content_item">
+      <image src="../../icons/user10.png" mode="widthFix"/>
+      <text class="text1">摇号查询</text>
+      <text class="iconfont icon-icon_arrow_right text2"></text>   
+    </view>
+    <view class="user_content_item">
+      <button open-type="contact" >
+        <image src="../../icons/user7.png" mode="widthFix"/>
+        <text class="text1">联系客服</text>
+        <text class="iconfont icon-icon_arrow_right text2"></text>    
+      </button>
+    </view>
+      
+  </view>
+    
+    
+</view>
+  

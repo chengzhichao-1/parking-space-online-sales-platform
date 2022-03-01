@@ -1,0 +1,83 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange"/>
+<view class="user_coupon_main">
+
+  
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="user_coupon_item_wrap">
+      <view class="user_coupon_item">
+        <image class="user_coupon_item_image1" src="../../icons/user_coupon5.png" mode="widthFix"/>
+        <image class="user_coupon_item_image2" src="../../icons/user_coupon2.png" mode="widthFix"/>  
+        <image class="user_coupon_item_image3" src="../../icons/user_coupon1.png" mode="widthFix"/>  
+        <view class="user_coupon_item_font1">
+          支付定金抵用券
+        </view>
+        <view class="user_coupon_item_font2">
+          2021-09-04 ~ 2021-11-11
+        </view>
+        <view class="user_coupon_item_font3">
+          满9999元可用，仅限支付定金可用
+        </view>
+        <view class="user_coupon_item_font4">
+          <text class="user_coupon_item_font4_1">￥</text> <text class="user_coupon_item_font4_1">300</text>
+        </view>
+        <view class="user_coupon_item_font5">
+          去使用
+        </view>
+      </view>
+        
+    </view>
+
+    <view class="user_coupon_item_wrap">
+      <view class="user_coupon_item">
+        <image class="user_coupon_item_image1" src="../../icons/user_coupon5.png" mode="widthFix"/>
+        <image class="user_coupon_item_image2" src="../../icons/user_coupon3.png" mode="widthFix"/>  
+        <image class="user_coupon_item_image3" src="../../icons/user_coupon1.png" mode="widthFix"/>  
+        <view class="user_coupon_item_font1">
+          支付尾款抵用券
+        </view>
+        <view class="user_coupon_item_font2">
+          2021-09-04 ~ 2021-11-11
+        </view>
+        <view class="user_coupon_item_font3">
+          满99999元可用，仅限支付尾款可用
+        </view>
+        <view class="user_coupon_item_font4">
+          <text class="user_coupon_item_font4_1">￥</text> <text class="user_coupon_item_font4_1">2300</text>
+        </view>
+        <view class="user_coupon_item_font5">
+          去使用
+        </view>
+      </view>
+        
+    </view>
+
+    <view class="user_coupon_item_wrap">
+      <view class="user_coupon_item">
+        <image class="user_coupon_item_image1" src="../../icons/user_coupon5.png" mode="widthFix"/>
+        <image class="user_coupon_item_image2" src="../../icons/user_coupon4.png" mode="widthFix"/>  
+        <image class="user_coupon_item_image3" src="../../icons/user_coupon1.png" mode="widthFix"/>  
+        <view class="user_coupon_item_font1">
+          通用抵用券
+        </view>
+        <view class="user_coupon_item_font2">
+          2021-09-04 ~ 2021-11-11
+        </view>
+        <view class="user_coupon_item_font3">
+          满999元可用，全部订单可用
+        </view>
+        <view class="user_coupon_item_font4">
+          <text class="user_coupon_item_font4_1">￥</text> <text class="user_coupon_item_font4_1">50</text>
+        </view>
+        <view class="user_coupon_item_font5">
+          去使用
+        </view>
+      </view>
+        
+    </view>  
+  </block>
+    
+  
+  
+    
+</view>
+  

@@ -1,0 +1,99 @@
+<view class="user_invite_main">
+  <view class="user_invite_top_wrap">
+    <view class="user_invite_top_text">
+      我的邀请
+    </view>
+    <view class="user_invite_contain_tixian">
+      去提现 > 
+    </view>
+    <view class="user_invite_top__">
+      
+    </view>
+    <view class="user_invite_number">
+      <view class="user_invite_number1">
+        <view class="user_invite_number1_1">
+          2
+        </view>
+        <view class="user_invite_number1_2">
+          邀请人数
+        </view>
+      </view>
+      <view class="user_invite_number1">
+        <view class="user_invite_number1_3">
+          10
+        </view>
+        <view class="user_invite_number1_2">
+          获得金额
+        </view>
+      </view>
+    </view>
+
+    <view class="user_invite_rule_wrap">
+      <view class="user_invite_rule_text">
+        邀请规则：
+      </view>
+      <view class="user_invite_rule_text">
+        1.当被你邀请的人点击了链接，并且实名认证成功后，将发放现金奖励。
+      </view>
+      <view class="user_invite_rule_text">
+        2.每邀请一人获得5元奖励，50元封顶，随时可提现到微信。
+      </view>
+      <view class="user_invite_rule_text">
+        3.《朋贝科技》保留对于恶意违法操作行为处罚和解释的权利。
+      </view>
+        
+    </view>
+      
+  </view>
+
+  <view class="user_invite_contain_wrap">
+    <view class="user_invite_contain_text">
+      邀请记录
+    </view>
+    
+      
+    <view class="user_invite_contain__">
+      
+    </view>
+
+    <view class="user_invite_contain_people">
+      <view class="user_invite_contain_people_item_title">
+        <view class="user_invite_contain_people_item_left">
+          邀请好友
+        </view>
+        <view class="user_invite_contain_people_item_right">
+          邀请时间
+        </view>
+      </view>
+      <view class="user_invite_contain_people_item">
+        <view class="user_invite_contain_people_item_left">
+          <image src="../../icons/user_invite1.jpg" mode="widthFix"/>
+          <view>屑黄宝</view>
+        </view>
+        <view class="user_invite_contain_people_item_right">
+          2021-10-06 20:17:58
+        </view>
+      </view>
+      <view class="user_invite_contain_people_item">
+        <view class="user_invite_contain_people_item_left">
+          <image src="../../icons/user_invite2.jpg" mode="widthFix"/>
+          <view>battle Y</view>
+        </view>
+        <view class="user_invite_contain_people_item_right">
+          2021-10-10 09:47:32
+        </view>
+      </view>
+      <view class="user_invite_contain_people_item">
+        <view class="user_invite_contain_people_item_left">
+          <image style="width: 50rpx;margin-top: 40rpx;margin-left: 20rpx;" src="../../icons/user_invite3.png" mode="widthFix"/>
+          <view><button style="width:320rpx;font-weight:400;margin-top:20rpx;margin-left:-30rpx" open-type="share">邀请好友</button></view>
+        </view>
+      </view>
+        
+    </view>
+      
+  </view>
+    
+    
+</view>
+  
